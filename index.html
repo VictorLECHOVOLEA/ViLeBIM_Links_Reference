@@ -16,14 +16,29 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./assets/img/favicon.ico" />
 </head>
-<body>
+<body class="light-theme">
+
     <div class="container">
+
         <header>
+            <img src="./assets/img/Victor-Catalin_Lechovolea.jpg"
+                width="300" 
+                alt="Victor LECHOVOLEA" class="ProfilePicture">
             <!-- emmet abreviation -->
             <h1 class="PageTitle">
                 <strong>Victor LECHOVOLEA</strong>
             </h1>
+            <label class="theme-switcher">
+                <input type="checkbox" onchange="toggleTheme()">
+                <span class="theme-slider"></span>
+                <span class="theme-icon sun">&#9728;</span>
+                <span class="theme-icon moon">&#9790;</span>
+                <span>Theme switch</span>
+            </label>
+            
         </header>
         <main>
             <ul class="ListLinks">
@@ -122,6 +137,10 @@
                 </li>
             </ul>
         </main>
+        <footer>
+            <p class="FooterText">© 2023 Victor LECHOVOLEA</p>
+        </footer>
     </div>
+    <script type="text/javascript" src=script.js></script>
 </body>
 </html>
