@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Theme Switcher</title>
+  <style>
+    /* Light theme */
+    body.light-theme {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    /* Dark theme */
+    body.dark-theme {
+      background-color: #1a1a1a;
+      color: #ffffff;
+    }
+
+    /* Image theme */
+    body.image-theme {
+      background-image: url("./assets/img/pexels-mitchell-luo-3694708 (tinypng).jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #ffffff;
+    }
+
+    .theme-switcher {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .theme-switcher input[type="radio"] {
+      display: none;
+    }
+
+    .theme-slider {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      background-color: #ccc;
+      border-radius: 34px;
+      cursor: pointer;
+      transition: background-color 0.4s;
+    }
+
+    .theme-slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      transition: transform 0.4s;
+    }
+
+    .theme-slider.dark:before {
+      transform: translateX(26px);
+    }
+
+    .theme-slider.image {
+      background-color: #000000;
+    }
+
+    .theme-slider.image:before {
+      background-color: #ffffff;
+    }
+
+    .theme-icon {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      color: #ffffff;
+      transition: 0.4s;
+    }
+
+    .theme-icon.moon {
+      left: 34px;
+      color: #1a1a1a;
+    }
+
+    .theme-icon.image {
+      left: 30px;
+    }
+  </style>
+</head>
+<body class="light-theme">
+
+  <h1>Theme Switcher</h1>
+
+  <div class="theme-switcher">
+    <input type="radio" name="theme" id="light-theme" checked>
+    <label class="theme-slider" for="light-theme">
+      <span class="theme-icon sun">&#9728;</span>
+    </label>
+  </div>
+
+  <div class="theme-switcher">
+    <input type="radio" name="theme" id="dark-theme">
+    <label class="theme-slider dark" for="dark-theme">
+      <span class="theme-icon moon">&#9790;</span>
+    </label>
+  </div>
+
+  <div class="theme-switcher">
+    <input type="radio" name="theme" id="image-theme">
+    <label class="theme-slider image" for="image-theme">
+      <span class="theme-icon image">&#127748;</span>
+    </label>
+  </div>
+
+  <script>
+    var body = document.body;
+    var lightThemeInput = document.getElementById("light-theme");
+    var darkThemeInput = document.getElementById("dark-theme");
+    var imageThemeInput = document.getElementById("image-theme");
+
+    lightThemeInput.addEventListener("change", function() {
+      body.classList.remove("dark-theme");
+      body.classList.remove("image-theme");
+      body.classList.add("light-theme");
+    });
+
+    darkThemeInput.addEventListener("change", function() {
+      body.classList.remove("light-theme");
+      body.classList.remove("image-theme");
+      body.classList.add("dark-theme");
+    });
+
+    imageThemeInput.addEventListener("change", function() {
+      body.classList.remove("light-theme");
+      body.classList.remove("dark-theme");
+      body.classList.add("image-theme");
+    });
+  </script>
+</body>
+</html>

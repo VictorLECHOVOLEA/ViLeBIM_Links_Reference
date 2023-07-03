@@ -1,12 +1,35 @@
 html {
-    background: black;
+    /* background: black url(./assets/img/pexels-mitchell-luo-3694708\ \(tinypng\).jpg) center center no-repeat; */
+    background-size: cover; color: white;
 
 }
 
 body {
     display: grid;
-    
+    place-items: center;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: Inter, Helvetica, Arial, sans-serif; */
+    /* https://about.easil.com/wp-content/uploads/blog-graphic-02-800x284.png */
+    font-size: 16px;
+    line-height: 1.5; /*1.5em *16px */
 }
+
+.Container {
+    width: 90%;
+    /* backgroud controlled by my light theme */
+    /* background: rgba(79, 109, 245, 0.8); */
+    /* margin: 0 auto; /*center*/ 
+    margin: 2vh auto; /*2% from viewport height*/ 
+    padding: 0 20px;
+    border-radius: 2rem;
+    font-size: clamp(1rem, 2vw, 2rem); /*1rem = 16px min, max font size*/
+}
+.header { }
+	.Avatar { display: block; float: left; width: 100px; height: auto; 
+			margin: 0 1em 0 0; border-radius: 15%}
+	.PageTitle { display: block; margin: 0; font-size: clamp(2rem, 6vw, 4rem); line-height: 1em; }
+
+
 
 
 /* Light theme */
@@ -15,66 +38,66 @@ body.light-theme {
     color: #000000;
     }
 
-    /* Dark theme */
-    body.dark-theme {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    }
+/* Dark theme */
+body.dark-theme {
+background-color: #1a1a1a;
+color: #ffffff;
+}
 
-    .theme-switcher {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    }
+.theme-switcher {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+}
 
-    .theme-slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    cursor: pointer;
-    background-color: #ccc;
-    border-radius: 34px;
-    transition: 0.4s;
-    }
+.theme-slider {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+cursor: pointer;
+background-color: #ccc;
+border-radius: 34px;
+transition: 0.4s;
+}
 
-    .theme-slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    transition: 0.4s;
-    }
+.theme-slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: #ffffff;
+border-radius: 50%;
+transition: 0.4s;
+}
 
-    input[type="checkbox"] {
-    opacity: 0;
-    width: 0;
-    height: 0;
-    }
+input[type="checkbox"] {
+opacity: 0;
+width: 0;
+height: 0;
+}
 
-    input[type="checkbox"]:checked + .theme-slider {
-    background-color: #2196F3;
-    }
+input[type="checkbox"]:checked + .theme-slider {
+background-color: #2196F3;
+}
 
-    input[type="checkbox"]:checked + .theme-slider:before {
-    transform: translateX(26px);
-    }
+input[type="checkbox"]:checked + .theme-slider:before {
+transform: translateX(26px);
+}
 
-    .theme-icon {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    color: #ffffff;
-    transition: 0.4s;
-    }
+.theme-icon {
+position: absolute;
+top: 3px;
+left: 3px;
+color: #ffffff;
+transition: 0.4s;
+}
 
-    .theme-icon.moon {
-    left: 34px;
-    color: #1a1a1a;
-    }
+.theme-icon.moon {
+left: 34px;
+color: #1a1a1a;
+}
