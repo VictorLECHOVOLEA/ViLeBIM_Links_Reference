@@ -1,0 +1,31 @@
+
+/* TIMELINE CSS */
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+th {
+  background-color: lightgray;
+}
+
+td.highlightLow {
+  background-color: #B3E5FC;
+  text-align: center;
+}
+td.highlightMedium {
+  background-color: #C8E6C9;
+  text-align: center;
+  }
+
+td.highlightHigh {
+  background-color: #FF8F00;
+  text-align: center;
+}
+td ul li {
+  text-align: left;
+}

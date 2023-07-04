@@ -24,7 +24,7 @@ body {
     border-radius: 2rem;
     font-size: clamp(1rem, 2vw, 2rem); /*1rem = 16px min, max font size*/
 }
-.header { }
+.header { } /*empty class for header for now*/
 	.Avatar { display: block; float: left; width: 100px; height: auto; 
 			margin: 0 1em 0 0; border-radius: 15%}
 	.PageTitle { display: block; margin: 0; font-size: clamp(2rem, 6vw, 4rem); line-height: 1em; }
@@ -100,4 +100,32 @@ transition: 0.4s;
 .theme-icon.moon {
 left: 34px;
 color: #1a1a1a;
+}
+
+/* TIMELINE CSS */
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+th {
+  background-color: lightgray;
+}
+
+td.highlightLow {
+  background-color: #B3E5FC;
+  text-align: center;
+}
+td.highlightMedium {
+  background-color: #C8E6C9;
+  text-align: center;
+  }
+
+td.highlightHigh {
+  background-color: #FF8F00;
+  text-align: center;
 }
