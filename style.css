@@ -1,6 +1,6 @@
 html {
-    /* background: black url(./assets/img/pexels-mitchell-luo-3694708\ \(tinypng\).jpg) center center no-repeat; */
-    background-size: cover; color: white;
+    background: black url(./assets/img/background.jpg) left center no-repeat;
+    /* background-size: cover; color: white; */
 
 }
 
@@ -17,115 +17,22 @@ body {
 .Container {
     width: 90%;
     /* backgroud controlled by my light theme */
-    /* background: rgba(79, 109, 245, 0.8); */
-    /* margin: 0 auto; /*center*/ 
+    background: rgba(79, 109, 245, 0.8);
+    margin: 0 auto; center;
     margin: 2vh auto; /*2% from viewport height*/ 
     padding: 0 20px;
     border-radius: 2rem;
     font-size: clamp(1rem, 2vw, 2rem); /*1rem = 16px min, max font size*/
 }
-.header { } /*empty class for header for now*/
-	.Avatar { display: block; float: left; width: 100px; height: auto; 
-			margin: 0 1em 0 0; border-radius: 15%}
-	.PageTitle { display: block; margin: 0; font-size: clamp(2rem, 6vw, 4rem); line-height: 1em; }
 
-
-
-
-/* Light theme */
-body.light-theme {
-    background-color: #ffffff;
-    color: #000000;
-    }
-
-/* Dark theme */
-body.dark-theme {
-background-color: #1a1a1a;
-color: #ffffff;
-}
-
-.theme-switcher {
-position: relative;
-display: inline-block;
-width: 60px;
-height: 34px;
-}
-
-.theme-slider {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-cursor: pointer;
-background-color: #ccc;
-border-radius: 34px;
-transition: 0.4s;
-}
-
-.theme-slider:before {
-position: absolute;
-content: "";
-height: 26px;
-width: 26px;
-left: 4px;
-bottom: 4px;
-background-color: #ffffff;
-border-radius: 50%;
-transition: 0.4s;
-}
-
-input[type="checkbox"] {
-opacity: 0;
-width: 0;
-height: 0;
-}
-
-input[type="checkbox"]:checked + .theme-slider {
-background-color: #2196F3;
-}
-
-input[type="checkbox"]:checked + .theme-slider:before {
-transform: translateX(26px);
-}
-
-.theme-icon {
-position: absolute;
-top: 3px;
-left: 3px;
-color: #ffffff;
-transition: 0.4s;
-}
-
-.theme-icon.moon {
-left: 34px;
-color: #1a1a1a;
-}
-
-/* TIMELINE CSS */
-table {
-  border-collapse: collapse;
-}
-
-table, th, td {
-  border: 1px solid black;
-  padding: 8px;
-}
-
-th {
-  background-color: lightgray;
-}
-
-td.highlightLow {
-  background-color: #B3E5FC;
-  text-align: center;
-}
-td.highlightMedium {
-  background-color: #C8E6C9;
-  text-align: center;
-  }
-
-td.highlightHigh {
-  background-color: #FF8F00;
-  text-align: center;
-}
+  .header { } /*empty class for header for now*/
+    .Avatar { display: block; float: left; width: 200px; height: auto; 
+        margin: 0 1em 0 0; border-radius: 15%}
+    .PageTitle { display: block; margin: 0; font-size: clamp(2rem, 6vw, 4rem); line-height: 1em; }
+    .PageSubTitle { display: block; margin: 0; font-size: clamp(1rem, 2vw, 2rem); line-height: 1em; }
+  .main {  }
+    .ListLinks {display: block; margin: 0; padding: 0;}
+      .ListItem {display: block; margin: 0; padding: 0; border-bottom: 1px solid white;}
+       .ListLink {display: block; margin: 0; padding: 0; text-decoration: none;}
+       .ListaLink:hover {background:white; color: black;}
+        .ListTitle, .ListText {display: block; margin: 0; padding: 0; font-size: 1em; line-height: 1.5em;}
