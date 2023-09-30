@@ -49,13 +49,12 @@ a{
     color: inherit;
 }
 
-img{
-    max-width: 100%;
-    display: block;
-}
-
 ul{
     list-style: none;
+}
+
+img{
+    max-width: 100%;
 }
 
 input,
@@ -128,7 +127,10 @@ body.light-theme{
     background-color: var(--secondary-background-color);
     /* opacity: 0;
     transform:scale(0); */
-    transition: opacity 0.25s transform 0.25s;
+    /* transition: opacity 0.25s transform 0.25s; */
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .25s ease-in;
 }
 
 .list{
