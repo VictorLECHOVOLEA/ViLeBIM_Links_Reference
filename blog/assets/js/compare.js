@@ -5,7 +5,7 @@ const selectElement = (selector) => {
     throw new Error(`Something went wrong! Make sure that ${selector} exists/is typed correctly.`);  
 };
 
-///Nav styles on scroll
+//Nav styles on scroll
 const scrollHeader = () =>{
     const navbarElement = selectElement('#header');
     if(this.scrollY >= 15) {
@@ -14,14 +14,14 @@ const scrollHeader = () =>{
         navbarElement.classList.remove('activated');
     }
 }
-    // https://youtu.be/Aj7HLsJenVg?t=2428
+
 window.addEventListener('scroll', scrollHeader);
 
-// Open menu & search pop-up 
+// Open menu & search pop-up
 const menuToggleIcon = selectElement('#menu-toggle-icon');
 const formOpenBtn = selectElement('#search-icon');
-const formCloseBtn = selectElement('#search-close-btn');
-const searchFormContainer = selectElement('#search-form-container');
+const formCloseBtn = selectElement('#form-close-btn');
+const searchContainer = selectElement('#search-form-container');
 
 const toggleMenu = () =>{
     const mobileMenu = selectElement('#menu');
